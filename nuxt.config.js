@@ -23,7 +23,7 @@ module.exports = {
 
     // Server settings
     server: {
-        port: 3000,
+        port: 2222,
         host: '0.0.0.0',
     },
 
