@@ -1,0 +1,12 @@
+[
+  {
+    "name": "icons",
+    "defaultSprite": true,
+    "symbols": [
+      "arrow",
+      "close",
+      "drop",
+      "refresh"
+    ]
+  }
+]

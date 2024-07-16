@@ -1,0 +1,67 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "name": "ЖК Пушкино",
+            "slug": "zhk-pushkino",
+            "address": "Москва",
+            "complete_date": "Сдан",
+            "min_price": 40000000,
+            "image_display": "/images/zhk-pushkino.png"
+        },
+        {
+            "id": 1,
+            "name": "ЖК Лермонтов",
+            "slug": "zhk-lermontov",
+            "address": "г. Москва",
+            "complete_date": "3 кв. 2023",
+            "min_price": 73000000,
+            "image_display": "/images/zhk-lermontov.png"
+        },
+        {
+            "id": 2,
+            "name": "ЖК Гоголь",
+            "slug": "zhk-gogol",
+            "address": "г. Санкт-Петербург",
+            "complete_date": "3 кв. 2023",
+            "min_price": 7700000,
+            "image_display": "/images/zhk-gogol.png"
+        },
+        {
+            "id": 3,
+            "name": "ЖК Толстой",
+            "slug": "zhk-tolstoj",
+            "address": "г. Санкт-Петербург",
+            "complete_date": "3 кв. 2023",
+            "min_price": 5700000,
+            "image_display": "/images/zhk-tolstoj.png"
+        },
+        {
+            "id": 4,
+            "name": "ЖК Достоевский",
+            "slug": "zhk-dostoevskij",
+            "address": "г. Екатеринбург",
+            "complete_date": "3 кв. 2023",
+            "min_price": 4270000,
+            "image_display": "/images/zhk-dostoevskij.png"
+        },
+        {
+            "id": 5,
+            "name": "ЖК Ерофеев",
+            "slug": "zhk-erofeev",
+            "address": "г. Екатеринбург",
+            "complete_date": "3 кв. 2023",
+            "min_price": 7770000,
+            "image_display": "/images/zhk-erofeev.png"
+        },
+        {
+            "id": 6,
+            "name": "ЖК Стругацкие",
+            "slug": "zhk-strugackie",
+            "address": "г. Краснодар",
+            "complete_date": "3 кв. 2023",
+            "min_price": 4200000,
+            "image_display": "/images/zhk-strugackie.png"
+        }
+    ]
+}

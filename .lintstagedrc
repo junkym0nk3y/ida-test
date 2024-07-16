@@ -1,0 +1,8 @@
+{
+    "*.(js|vue)": [
+        "eslint --cache"
+    ],
+    "*.(scss|vue)": [
+        "stylelint --allow-empty-input"
+    ]
+}
