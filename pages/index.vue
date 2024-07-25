@@ -23,8 +23,9 @@
                 <div
                     :class="[$style.projectsList, {[$style._reload]: isReloadActive}]"
                 >
+                    <!-- #TODO: сюда будут выводиться карточки по созданному тобой computed свойству списка проектов -->
                     <ProjectCard
-                        v-for="(project, index) in items"
+                        v-for="(project, index) in parsedItems"
                         :key="`${index}_project`"
                         :project="project"
                     />
@@ -36,7 +37,7 @@
                     name="fade-fast"
                 >
                     <div
-                        v-if="view === 'list' && isReloadActive"
+                        v-if="isReloadActive"
                         :class="$style.listWrapper"
                     >
                         <ProjectsLoader />
@@ -71,10 +72,6 @@ const arrUpdateSpecs = ['zone', 'propertyType'];
 // Reset values by keys
 const arrResetValues = ['zone'];
 
-/**
- * @version 1.0.2
- * @displayName ProjectsFilterPage
- */
 export default {
     name: 'ProjectsFilterPage',
 
@@ -92,19 +89,18 @@ export default {
 
         const values = applyQuery(defaultValues, queryValues);
 
-        try {
-            const [projectsRes, specsRes, facetsRes] = await Promise.all([
-                app.$axios.$get(app.$api.projects.list, {
-                    params: values,
-                    paramsSerializer: params => objectToQuery(params),
-                }),
+        // #TODO: в хуке asyncData необходимо будет настроить так-же получение списка карточек с "бекенда",
+        //   по аналогии с получением спеков и фасетов. апи проектов - $api.projects.list
 
+        try {
+            const [specsRes, facetsRes] = await Promise.all([
                 // Фильтруем спеки, для query
                 app.$axios.$get(app.$api.projects.specs, {
                     params: Object.fromEntries(Object.entries(values)
                         .filter(([key]) => arrUpdateSpecs.includes(key))),
                     paramsSerializer: params => objectToQuery(params),
                 }),
+
                 app.$axios.$get(app.$api.projects.facets, {
                     params: values,
                     paramsSerializer: params => objectToQuery(params),
@@ -112,11 +108,12 @@ export default {
             ]);
 
             return {
-                items: projectsRes || [],
+                /* #TODO: тут необходимо вернуть в компонент данные с созданного тобой запроса о проектах */
+                // items: ?? - список проектов с "бекенда"
+                // count: ?? - количество проектов в списке
+                // counter: ?? - количество проектов в списке
                 facets: prepareSpecs(facetsRes) || {},
                 specs: prepareSpecs(specsRes) || {},
-                count: projectsRes?.length || 0,
-                counter: projectsRes?.length || 0,
                 values,
             };
         } catch (err) {
@@ -126,14 +123,13 @@ export default {
 
     data() {
         return {
+            items: [],
             specs: {},
             facets: {},
-            items: [],
             values: { ...defaultValues },
             count: 0,
             counter: 0,
             isReloadActive: true,
-            view: 'list',
         };
     },
 
@@ -141,6 +137,15 @@ export default {
         // Проверка на отображение кнопки сброса
         isShowReset() {
             return JSON.stringify(this.values) !== JSON.stringify(defaultValues);
+        },
+
+        /**
+         * #TODO: computed свойство отвечающее за данные для рендера списка карточек,
+         * тут будет необходимо преобразовать данные полученные с "бекенда" для использования
+         * на шаблоне. В этом массиве, у обьектов должны быть только те данные, что нужны согласно макету!
+         */
+        parsedItems() {
+            return this.items;
         },
     },
 
@@ -334,10 +339,6 @@ export default {
         margin: -.8rem;
         padding-top: 1.6rem;
         opacity: 1;
-
-        /* отключаем переход по ссылке, для демки */
-
-        pointer-events: none;
 
         @include respond-to(tablet) {
             margin: 0 0 2.4rem;

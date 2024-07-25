@@ -41,6 +41,7 @@ export default ({ $axios }) => {
             const specs = handleFlatsSpecsFacets(allFlats, config?.params || {}, skipParams);
             return [202, specs];
         });
+
     mock.onAny()
         .passThrough();
 };

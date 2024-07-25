@@ -3,65 +3,335 @@
         {
             "id": 0,
             "name": "ЖК Пушкино",
-            "slug": "zhk-pushkino",
-            "address": "Москва",
             "complete_date": "Сдан",
             "min_price": 40000000,
-            "image_display": "/images/zhk-pushkino.png"
+            "details": {
+                "slug": "zhk-pushkino",
+                "address": "г. Москва",
+                "image_display": "/images/zhk-pushkino.png",
+                "description": "A premium residential complex in the heart of Moscow.",
+                "amenities": ["parking", "security", "playground"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 250,
+                        "type": "underground"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": true,
+                    "details": {
+                        "membership_required": true,
+                        "opening_hours": "6 AM - 10 PM"
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (495) 123-45-67",
+                    "email": "sales@pushkino.ru",
+                    "address": "ул. Тверская, 20"
+                },
+                "support": {
+                    "phone": "+7 (495) 123-45-68",
+                    "email": "support@pushkino.ru",
+                    "working_hours": "24/7"
+                }
+            }
         },
         {
             "id": 1,
             "name": "ЖК Лермонтов",
-            "slug": "zhk-lermontov",
-            "address": "г. Москва",
             "complete_date": "3 кв. 2023",
             "min_price": 73000000,
-            "image_display": "/images/zhk-lermontov.png"
+            "details": {
+                "slug": "zhk-lermontov",
+                "address": "г. Москва",
+                "image_display": "/images/zhk-lermontov.png",
+                "description": "A luxurious residential complex with premium amenities.",
+                "amenities": ["parking", "gym", "pool", "playground"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": false,
+                    "details": {
+                        "capacity": 300,
+                        "type": "multi-level"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": true,
+                    "details": {
+                        "membership_required": true,
+                        "opening_hours": "5 AM - 11 PM"
+                    }
+                },
+                {
+                    "type": "pool",
+                    "available": true,
+                    "details": {
+                        "size": "50m",
+                        "heated": true
+                    }
+                },
+                {
+                    "type": "playground",
+                    "available": true,
+                    "details": {
+                        "age_group": "3-12",
+                        "equipment": ["slides", "swings", "sandbox"]
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (495) 123-45-67",
+                    "email": "sales@lermontov.ru",
+                    "address": "ул. Тверская, 20"
+                },
+                "support": {
+                    "phone": "+7 (495) 123-45-68",
+                    "email": "support@lermontov.ru",
+                    "working_hours": "24/7"
+                }
+            }
         },
         {
             "id": 2,
             "name": "ЖК Гоголь",
-            "slug": "zhk-gogol",
-            "address": "г. Санкт-Петербург",
             "complete_date": "3 кв. 2023",
             "min_price": 7700000,
-            "image_display": "/images/zhk-gogol.png"
+            "details": {
+                "slug": "zhk-gogol",
+                "address": "г. Санкт-Петербург",
+                "image_display": "/images/zhk-gogol.png",
+                "description": "A modern residential complex in the heart of St. Petersburg.",
+                "amenities": ["parking", "security", "playground"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 200,
+                        "type": "underground"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": false,
+                    "details": {
+                        "membership_required": true,
+                        "opening_hours": "6 AM - 10 PM"
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (812) 123-45-67",
+                    "email": "sales@gogol.ru",
+                    "address": "ул. Невский, 10"
+                },
+                "support": {
+                    "phone": "+7 (812) 123-45-68",
+                    "email": "support@gogol.ru",
+                    "working_hours": "24/7"
+                }
+            }
         },
         {
             "id": 3,
             "name": "ЖК Толстой",
-            "slug": "zhk-tolstoj",
-            "address": "г. Санкт-Петербург",
             "complete_date": "3 кв. 2023",
             "min_price": 5700000,
-            "image_display": "/images/zhk-tolstoj.png"
+            "details": {
+                "slug": "zhk-tolstoj",
+                "address": "г. Санкт-Петербург",
+                "image_display": "/images/zhk-tolstoj.png",
+                "description": "A cozy residential complex with all necessary amenities.",
+                "amenities": ["parking", "gym", "pool"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 150,
+                        "type": "open"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": true,
+                    "details": {
+                        "membership_required": false,
+                        "opening_hours": "24/7"
+                    }
+                },
+                {
+                    "type": "pool",
+                    "available": false,
+                    "details": {
+                        "size": "25m",
+                        "heated": true
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (812) 654-32-10",
+                    "email": "sales@tolstoj.ru",
+                    "address": "ул. Ленина, 15"
+                },
+                "support": {
+                    "phone": "+7 (812) 654-32-11",
+                    "email": "support@tolstoj.ru",
+                    "working_hours": "9 AM - 6 PM"
+                }
+            }
         },
         {
             "id": 4,
             "name": "ЖК Достоевский",
-            "slug": "zhk-dostoevskij",
-            "address": "г. Екатеринбург",
             "complete_date": "3 кв. 2023",
             "min_price": 4270000,
-            "image_display": "/images/zhk-dostoevskij.png"
+            "details": {
+                "slug": "zhk-dostoevskij",
+                "address": "г. Екатеринбург",
+                "image_display": "/images/zhk-dostoevskij.png",
+                "description": "A modern residential complex in the heart of the city.",
+                "amenities": ["parking", "security", "playground"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 200,
+                        "type": "underground"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": false,
+                    "details": {
+                        "membership_required": true,
+                        "opening_hours": "6 AM - 10 PM"
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (343) 123-45-67",
+                    "email": "sales@dostoevskij.ru",
+                    "address": "ул. Ленина, 10"
+                },
+                "support": {
+                    "phone": "+7 (343) 123-45-68",
+                    "email": "support@dostoevskij.ru",
+                    "working_hours": "24/7"
+                }
+            }
         },
         {
             "id": 5,
             "name": "ЖК Ерофеев",
-            "slug": "zhk-erofeev",
-            "address": "г. Екатеринбург",
             "complete_date": "3 кв. 2023",
             "min_price": 7770000,
-            "image_display": "/images/zhk-erofeev.png"
+            "details": {
+                "slug": "zhk-erofeev",
+                "address": "г. Екатеринбург",
+                "image_display": "/images/zhk-erofeev.png",
+                "description": "A modern residential complex in the heart of the city.",
+                "amenities": ["parking", "security", "playground"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 200,
+                        "type": "underground"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": false,
+                    "details": {
+                        "membership_required": true,
+                        "opening_hours": "6 AM - 10 PM"
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (343) 456-78-90",
+                    "email": "sales@erofeev.ru",
+                    "address": "ул. Ленина, 10"
+                },
+                "support": {
+                    "phone": "+7 (343) 456-78-91",
+                    "email": "support@erofeev.ru",
+                    "working_hours": "24/7"
+                }
+            }
         },
         {
             "id": 6,
             "name": "ЖК Стругацкие",
-            "slug": "zhk-strugackie",
-            "address": "г. Краснодар",
             "complete_date": "3 кв. 2023",
             "min_price": 4200000,
-            "image_display": "/images/zhk-strugackie.png"
+            "details": {
+                "slug": "zhk-strugackie",
+                "address": "г. Краснодар",
+                "image_display": "/images/zhk-strugackie.png",
+                "description": "A cozy residential complex with all necessary amenities.",
+                "amenities": ["parking", "gym", "pool"]
+            },
+            "features": [
+                {
+                    "type": "parking",
+                    "available": true,
+                    "details": {
+                        "capacity": 150,
+                        "type": "open"
+                    }
+                },
+                {
+                    "type": "gym",
+                    "available": true,
+                    "details": {
+                        "membership_required": false,
+                        "opening_hours": "24/7"
+                    }
+                },
+                {
+                    "type": "pool",
+                    "available": false,
+                    "details": {
+                        "size": "25m",
+                        "heated": true
+                    }
+                }
+            ],
+            "contacts": {
+                "sales_office": {
+                    "phone": "+7 (861) 654-32-10",
+                    "email": "sales@strugackie.ru",
+                    "address": "ул. Пушкина, 15"
+                },
+                "support": {
+                    "phone": "+7 (861) 654-32-11",
+                    "email": "support@strugackie.ru",
+                    "working_hours": "9 AM - 6 PM"
+                }
+            }
         }
     ]
 }
